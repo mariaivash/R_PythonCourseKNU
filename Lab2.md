@@ -9,6 +9,7 @@ v[10]
 ```
 
 * елементи з 10-го по 20-й включно; 
+```r
 v[10:20]
  [1] -1.2256727  1.1622779  0.5908119
  [4]  0.5946038 -0.1027941 -0.9135984
@@ -91,8 +92,8 @@ for(i in 1:100) {
 [1] 0.8903694
 ```
 
-##Task2
-###Створити y <- data.frame(a = rnorm(100), b = 1:100, cc = sample(letters, 100, replace = TRUE)). Вивести:
+## Task2
+### Створити y <- data.frame(a = rnorm(100), b = 1:100, cc = sample(letters, 100, replace = TRUE)). Вивести:
 * останні 10 строк; 
 ```r
 y <- data.frame(a = rnorm(100), b = 1:100, cc = sample(letters, 100, replace = TRUE))

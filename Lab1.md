@@ -5,8 +5,8 @@
 ```r
 gDef <- "gravitational acceleration"
 class(gDef)
-```
 [1] "character"
+```
 
 * Реальне число
 ```r
@@ -103,7 +103,7 @@ m2
 ```
 
 ## Task4
-### Створити довільний список (list), в який включити всі базові типи. 
+### Створити довільний список (**list**), в який включити всі базові типи. 
 ```r
 g <- list(gVal, gRound, gCompl, gDef, gLog)
 print(g)

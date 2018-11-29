@@ -2,7 +2,8 @@
 ## Task1
 ### Створити змінні базових (atomic) типів.
 * Текстовий
-``` gDef <- "gravitational acceleration"
+```r
+gDef <- "gravitational acceleration"
 class(gDef)
 ```
 [1] "character"

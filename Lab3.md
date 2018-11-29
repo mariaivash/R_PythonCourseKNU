@@ -64,12 +64,12 @@ my_ifelse(x, "+", 0)
 * Логічний параметр **removeNA** вказує, чи видаляти **NA** значення. По замовчуванню він дорівнює **TRUE**. 
 ```r
 columnmean <- function(x, removeNA=TRUE){ 
-  colMeans(k, na.rm=removeNA)
+  colMeans(x, na.rm=removeNA)
   }
 k <- matrix(c(1:3, NA, 5, 6, NA, NA, 9, 10), nrow=2, ncol=5)
-columnmean(k)
+columnmean(x)
 [1] 1.5 3.0 5.5 NaN 9.5
 
-columnmean (k, FALSE)
+columnmean (x, FALSE)
 [1] 1.5  NA 5.5  NA 9.5
 ```

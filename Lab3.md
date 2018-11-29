@@ -66,7 +66,7 @@ my_ifelse(x, "+", 0)
 columnmean <- function(x, removeNA=TRUE){ 
   colMeans(x, na.rm=removeNA)
   }
-k <- matrix(c(1:3, NA, 5, 6, NA, NA, 9, 10), nrow=2, ncol=5)
+x <- matrix(c(1:3, NA, 5, 6, NA, NA, 9, 10), nrow=2, ncol=5)
 columnmean(x)
 [1] 1.5 3.0 5.5 NaN 9.5
 

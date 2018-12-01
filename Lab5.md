@@ -11,9 +11,11 @@ pmean <- function(pollutant, id = 1:332, directory="C:/Users/Mary/Documents/spec
   }
 
 pmean("sulfate", 15)
+[1] 1.098687
 ```
 ```{r}
 pmean("nitrate", 88:100)
+[1] 2.253701
 ```
 
 ## Task2
@@ -31,10 +33,27 @@ complete <- function(id= 1:332, directory="C:/Users/Mary/Documents/specdata"){
 return(data.frame(id, numrow))
   }
 complete (c(2, 4, 8, 10,12))
+  id numrow
+1  2   1041
+2  4    474
+3  8    192
+4 10    148
+5 12     96
 ```
 
 ```{r}
 complete (12:21)
+ id numrow
+1  12     96
+2  13     46
+3  14     96
+4  15     83
+5  16     60
+6  17    927
+7  18     84
+8  19    353
+9  20    124
+10 21    426
 ```
 
 ## Task3
@@ -56,13 +75,18 @@ corr <- function(threshold = 0, directory="C:/Users/Mary/Documents/specdata") {
     return (as.numeric(c()))
 }
 head(corr())
+[1] -0.22255256 -0.01895754 -0.14051254
+[4] -0.04389737 -0.06815956 -0.12350667
 ```
 
 ```{r}
 head(corr(150))
+[1] -0.01895754 -0.14051254 -0.04389737
+[4] -0.06815956 -0.12350667 -0.07588814
 ```
 
 ```{r}
 summary(corr())
+ Min.  1st Qu.   Median     Mean    3rd Qu.     Max.
+-1.00000 -0.05282  0.10718  0.13684  0.27831  1.00000 
 ```
-

@@ -6,8 +6,8 @@
 #Створюємо функцію
 pmean <- function(pollutant, id = 1:332, directory="C:/Users/Mary/Documents/specdata") {
 #Зчитуємо файл, задаємо забруднювач
-  data1 = lapply(id, function(i) read.csv(paste(directory, "/", formatC(i,width = 3, flag = "0"), ".csv", sep=""))[[pollutant]])
-  return (mean(unlist(data1), na.rm = TRUE))
+  data1 = sapply(id, function(i) read.csv(paste(directory, "/", formatC(i,width = 3, flag = "0"), ".csv", sep=""))[[pollutant]])
+  return (mean(data1, na.rm = TRUE))
   }
 
 pmean("sulfate", 15)
@@ -24,11 +24,10 @@ pmean("nitrate", 88:100)
 ```r
 #Створюємо функцію
 complete <- function(id= 1:332, directory="C:/Users/Mary/Documents/specdata"){
-  numrow <- numeric()
   #Зчитуємо файл, підраховуємо кількість рядків
     for (i in id) { 
       data2 <- read.csv(paste(directory, "/", formatC(i, width = 3, flag = "0"),  ".csv", sep = ""))
-       numrow <- c(numrow,sum(complete.cases(data2)))
+       numrow <- sum(complete.cases(data2))
     }
 return(data.frame(id, numrow))
   }
